@@ -1,0 +1,16 @@
+Caja Azul;11222;11111;electrico;111;Disponible
+Caja Negra;2000;21200;cosas;2010;Disponible
+PS4;30000 Bs;23049;Juguetes;201098;Disponible
+Juguete;300450;23049;Juguetes;201098;Disponible
+Patines;34400;23049;Juguetes;201098;NoDisponible
+Legos;56000;23049;Juguetes;201098;Disponible
+Rompecabezas;2001;21200;Juguetes;2010;Disponible
+Rompecabezas;2002;21200;Juguetes;2010;Disponible
+Rompecabezas;2003;21200;Juguetes;2010;Disponible
+Rompecabezas;2004;21200;Juguetes;2010;Disponible
+Rompecabezas;2005;21200;Juguetes;2010;Disponible
+Rompecabezas;2006;21200;Juguetes;2010;Disponible
+Rompecabezas;2007;21200;Juguetes;2010;Disponible
+Rompecabezas;2008;21200;Juguetes;2010;Disponible
+Rompecabezas;2009;21200;Juguetes;2010;Disponible
+harina;1555;asas;Juguetes;15;Disponible
