@@ -47,7 +47,6 @@ public class VentanaActualizarInformacion extends VentanaBase {
         EtiquetaCedula = new javax.swing.JLabel();
         CedulaTextField = new javax.swing.JTextField();
         EtiquetaFechaNacimiento = new javax.swing.JLabel();
-        DoB = new com.toedter.calendar.JDateChooser();
         EtiquetaContraseña = new javax.swing.JLabel();
         ContraseñaPassfield = new javax.swing.JPasswordField();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -96,8 +95,6 @@ public class VentanaActualizarInformacion extends VentanaBase {
         EtiquetaCedula.setText("C.I");
 
         EtiquetaFechaNacimiento.setText("Fecha Nacimiento");
-
-        DoB.setMaxSelectableDate(new java.util.Date(852094869000L));
 
         EtiquetaContraseña.setText("Contraseña");
 
@@ -191,14 +188,12 @@ public class VentanaActualizarInformacion extends VentanaBase {
                                         .addComponent(UsernameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                 .addGap(63, 63, 63)
                                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(DoB, javax.swing.GroupLayout.PREFERRED_SIZE, 231, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(EmailTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 231, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(ApellidoTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 231, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addComponent(EtiquetaDireccion)
                                 .addGap(18, 18, 18)
-                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 224, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(529, 529, 529))
+                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 224, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addComponent(EtiquetaContraseña)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -230,10 +225,8 @@ public class VentanaActualizarInformacion extends VentanaBase {
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(EtiquetaApellido)
                             .addComponent(ApellidoTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(22, 22, 22)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(EtiquetaFechaNacimiento)
-                            .addComponent(DoB, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGap(37, 37, 37)
+                        .addComponent(EtiquetaFechaNacimiento)))
                 .addGap(16, 16, 16)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(EtiquetaEmail)
@@ -348,7 +341,6 @@ public class VentanaActualizarInformacion extends VentanaBase {
     private javax.swing.JTextField CedulaTextField;
     private javax.swing.JPasswordField ComprobacionPassfield;
     private javax.swing.JPasswordField ContraseñaPassfield;
-    private com.toedter.calendar.JDateChooser DoB;
     private javax.swing.JTextField EmailTextField;
     private javax.swing.JLabel EtiquetaApellido;
     private javax.swing.JLabel EtiquetaCedula;

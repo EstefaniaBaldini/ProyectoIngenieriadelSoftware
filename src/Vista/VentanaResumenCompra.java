@@ -5,17 +5,29 @@
  */
 package Vista;
 
+import Modelo.Usuario;
+
 /**
  *
  * @author Usuario
  */
-public class VentanaResumenCompra extends javax.swing.JFrame {
+public class VentanaResumenCompra extends VentanaBase {
 
     /**
      * Creates new form VentanaResumenCompra
      */
-    public VentanaResumenCompra() {
+    public VentanaResumenCompra(long PrecioTotall) {
         initComponents();
+        long precio = PrecioTotall;
+        
+               this.MontoFinal.setText(precio + " Bs.");
+               this.setLocationRelativeTo(null);
+               this.Nombre.setText(Usuario.getNombre());
+               this.Username.setText(Usuario.getUsername());
+               this.email.setText(Usuario.getEmail());
+               this.cedula.setText(Usuario.getCedula());
+               this.direccion.setText(Usuario.getDireccion());
+               this.apellido.setText(Usuario.getApellido());
     }
 
     /**
@@ -41,11 +53,23 @@ public class VentanaResumenCompra extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
+        MontoFinal = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         jLabel15 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
+        jLabel19 = new javax.swing.JLabel();
+        Username = new javax.swing.JLabel();
+        Nombre = new javax.swing.JLabel();
+        apellido = new javax.swing.JLabel();
+        cedula = new javax.swing.JLabel();
+        direccion = new javax.swing.JLabel();
+        email = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
         jLabel16 = new javax.swing.JLabel();
@@ -87,7 +111,8 @@ public class VentanaResumenCompra extends javax.swing.JFrame {
 
         jLabel10.setText("______________________________");
 
-        jLabel12.setText("Monto");
+        MontoFinal.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        MontoFinal.setText("Monto");
 
         jLabel13.setText("12%");
 
@@ -107,7 +132,7 @@ public class VentanaResumenCompra extends javax.swing.JFrame {
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(75, 75, 75)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(MontoFinal, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel13)))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(60, 60, 60)
@@ -127,7 +152,7 @@ public class VentanaResumenCompra extends javax.swing.JFrame {
                         .addComponent(jLabel3))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                         .addContainerGap(37, Short.MAX_VALUE)
-                        .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(MontoFinal, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 3, Short.MAX_VALUE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -150,21 +175,109 @@ public class VentanaResumenCompra extends javax.swing.JFrame {
         jLabel15.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         jLabel15.setText("DATOS DE CLIENTE");
 
+        jLabel7.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabel7.setText("Nombre : ");
+
+        jLabel11.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabel11.setText("Apellido : ");
+
+        jLabel12.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabel12.setText("Direccion :");
+
+        jLabel17.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabel17.setText("Cédula : ");
+
+        jLabel18.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabel18.setText("Nombre de Usuario : ");
+
+        jLabel19.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabel19.setText("Email : ");
+
+        Username.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        Username.setText("jLabel21");
+
+        Nombre.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        Nombre.setText("jLabel21");
+
+        apellido.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        apellido.setText("jLabel21");
+
+        cedula.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        cedula.setText("jLabel21");
+
+        direccion.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        direccion.setText("jLabel21");
+
+        email.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        email.setText("jLabel21");
+
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(19, 19, 19)
-                .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 311, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(19, 19, 19)
+                        .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 311, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel18)
+                        .addGap(18, 18, 18)
+                        .addComponent(Username))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(58, 58, 58)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel3Layout.createSequentialGroup()
+                                .addComponent(jLabel11)
+                                .addGap(18, 18, 18)
+                                .addComponent(apellido))
+                            .addGroup(jPanel3Layout.createSequentialGroup()
+                                .addComponent(jLabel7)
+                                .addGap(18, 18, 18)
+                                .addComponent(Nombre))
+                            .addGroup(jPanel3Layout.createSequentialGroup()
+                                .addComponent(jLabel19)
+                                .addGap(18, 18, 18)
+                                .addComponent(email))
+                            .addGroup(jPanel3Layout.createSequentialGroup()
+                                .addComponent(jLabel17)
+                                .addGap(18, 18, 18)
+                                .addComponent(cedula))
+                            .addGroup(jPanel3Layout.createSequentialGroup()
+                                .addComponent(jLabel12)
+                                .addGap(18, 18, 18)
+                                .addComponent(direccion)))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGap(19, 19, 19)
-                .addComponent(jLabel15)
-                .addContainerGap(275, Short.MAX_VALUE))
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel15)
+                    .addComponent(jLabel18)
+                    .addComponent(Username))
+                .addGap(30, 30, 30)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel7)
+                    .addComponent(Nombre))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel11)
+                    .addComponent(apellido))
+                .addGap(29, 29, 29)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel17)
+                    .addComponent(cedula))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel12)
+                    .addComponent(direccion))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel19)
+                    .addComponent(email))
+                .addContainerGap(92, Short.MAX_VALUE))
         );
 
         jButton1.setBackground(new java.awt.Color(255, 204, 0));
@@ -293,28 +406,40 @@ public class VentanaResumenCompra extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new VentanaResumenCompra().setVisible(true);
+                new VentanaResumenCompra(0).setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel MontoFinal;
+    private javax.swing.JLabel Nombre;
     private javax.swing.JLabel TituloRegistro;
+    private javax.swing.JLabel Username;
+    private javax.swing.JLabel apellido;
+    private javax.swing.JLabel cedula;
+    private javax.swing.JLabel direccion;
+    private javax.swing.JLabel email;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;

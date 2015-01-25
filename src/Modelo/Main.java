@@ -21,6 +21,7 @@ public class Main {
         // TODO code application logic here
         
         BusquedaProductos main = new BusquedaProductos();
+        main.setLocationRelativeTo(null);
         main.setVisible(true);
     }
     

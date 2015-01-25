@@ -6,6 +6,7 @@
 package Vista;
 
 import Controlador.ControladorBusqueda;
+import Modelo.Status;
 import javax.swing.JMenuItem;
 
 /**
@@ -19,7 +20,8 @@ public class BusquedaProductos extends VentanaBase {
 
               String productos [] = null;
               String productoMuleta[] = null;
-                int cantmax, posicionAct;
+                int cantmax, posicionAct; 
+                String productosCarrito = "";
     
     /**
      * Creates new form BusquedaProductos
@@ -46,6 +48,9 @@ public class BusquedaProductos extends VentanaBase {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jMenuBar2 = new javax.swing.JMenuBar();
+        jMenu1 = new javax.swing.JMenu();
+        jMenu2 = new javax.swing.JMenu();
         jPanel10 = new javax.swing.JPanel();
         TituloRegistro = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
@@ -65,13 +70,13 @@ public class BusquedaProductos extends VentanaBase {
         jPanel11 = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
         Producto8 = new javax.swing.JPanel();
-        TituloP8 = new javax.swing.JLabel();
+        TituloP7 = new javax.swing.JLabel();
         PrecioLbl7 = new javax.swing.JLabel();
         CntLbl7 = new javax.swing.JLabel();
-        PrecioP8 = new javax.swing.JLabel();
-        CantidadP8 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
-        jLabel26 = new javax.swing.JLabel();
+        Carro4 = new javax.swing.JLabel();
+        PrecioP7 = new javax.swing.JLabel();
+        CantidadP7 = new javax.swing.JLabel();
         Producto6 = new javax.swing.JPanel();
         TituloP6 = new javax.swing.JLabel();
         PrecioLbl4 = new javax.swing.JLabel();
@@ -79,15 +84,15 @@ public class BusquedaProductos extends VentanaBase {
         PrecioP6 = new javax.swing.JLabel();
         CantidadP6 = new javax.swing.JLabel();
         jLabel18 = new javax.swing.JLabel();
-        jLabel24 = new javax.swing.JLabel();
+        Carro3 = new javax.swing.JLabel();
         Producto7 = new javax.swing.JPanel();
-        TituloP7 = new javax.swing.JLabel();
+        TituloP8 = new javax.swing.JLabel();
         PrecioLbl6 = new javax.swing.JLabel();
         CntLbl6 = new javax.swing.JLabel();
-        PrecioP7 = new javax.swing.JLabel();
-        CantidadP7 = new javax.swing.JLabel();
         jLabel19 = new javax.swing.JLabel();
-        jLabel23 = new javax.swing.JLabel();
+        Carro5 = new javax.swing.JLabel();
+        PrecioP8 = new javax.swing.JLabel();
+        CantidadP8 = new javax.swing.JLabel();
         Producto4 = new javax.swing.JPanel();
         TituloP4 = new javax.swing.JLabel();
         PrecioLbl5 = new javax.swing.JLabel();
@@ -95,7 +100,7 @@ public class BusquedaProductos extends VentanaBase {
         PrecioP4 = new javax.swing.JLabel();
         CantidadP4 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jLabel21 = new javax.swing.JLabel();
+        Carro1 = new javax.swing.JLabel();
         Producto5 = new javax.swing.JPanel();
         TituloP5 = new javax.swing.JLabel();
         PrecioLbl3 = new javax.swing.JLabel();
@@ -103,7 +108,7 @@ public class BusquedaProductos extends VentanaBase {
         PrecioP5 = new javax.swing.JLabel();
         CantidadP5 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        jLabel22 = new javax.swing.JLabel();
+        Carro2 = new javax.swing.JLabel();
         SiguienteBtn = new javax.swing.JButton();
         CategoriaBox = new javax.swing.JComboBox();
         CategoriaLbl = new javax.swing.JLabel();
@@ -120,8 +125,18 @@ public class BusquedaProductos extends VentanaBase {
         PrecioP9 = new javax.swing.JLabel();
         CantidadP9 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
-        jLabel27 = new javax.swing.JLabel();
+        carro6 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
+        jMenu3 = new javax.swing.JMenu();
+        jMenu6 = new javax.swing.JMenu();
+        jMenu4 = new javax.swing.JMenu();
+        jMenu5 = new javax.swing.JMenu();
+
+        jMenu1.setText("File");
+        jMenuBar2.add(jMenu1);
+
+        jMenu2.setText("Edit");
+        jMenuBar2.add(jMenu2);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 204, 0));
@@ -200,7 +215,7 @@ public class BusquedaProductos extends VentanaBase {
         jLabel20.setText("jLabel20");
         jPanel10.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 90, 1370, -1));
 
-        getContentPane().add(jPanel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1370, 100));
+        getContentPane().add(jPanel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 1370, 90));
 
         jScrollPane1.setBackground(new java.awt.Color(255, 204, 0));
 
@@ -211,21 +226,26 @@ public class BusquedaProductos extends VentanaBase {
 
         Producto8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        TituloP8.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        TituloP8.setText("jLabel10");
+        TituloP7.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        TituloP7.setText("jLabel10");
 
         PrecioLbl7.setText("Precio");
 
         CntLbl7.setText("Cantidad");
 
-        PrecioP8.setFont(new java.awt.Font("Tahoma", 3, 11)); // NOI18N
-        PrecioP8.setText("jLabel17");
-
-        CantidadP8.setText("jLabel18");
-
         jLabel10.setText("ImagArticulo");
 
-        jLabel26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Iconos/shopcart.png"))); // NOI18N
+        Carro4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Iconos/shopcart.png"))); // NOI18N
+        Carro4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Carro4MouseClicked(evt);
+            }
+        });
+
+        PrecioP7.setFont(new java.awt.Font("Tahoma", 3, 11)); // NOI18N
+        PrecioP7.setText("jLabel21");
+
+        CantidadP7.setText("jLabel22");
 
         javax.swing.GroupLayout Producto8Layout = new javax.swing.GroupLayout(Producto8);
         Producto8.setLayout(Producto8Layout);
@@ -234,19 +254,20 @@ public class BusquedaProductos extends VentanaBase {
             .addGroup(Producto8Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(Producto8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(TituloP8)
+                    .addComponent(TituloP7)
                     .addGroup(Producto8Layout.createSequentialGroup()
-                        .addGroup(Producto8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGroup(Producto8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(Producto8Layout.createSequentialGroup()
                                 .addComponent(CntLbl7)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(CantidadP8, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(CantidadP7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGap(22, 22, 22))
                             .addGroup(Producto8Layout.createSequentialGroup()
                                 .addComponent(PrecioLbl7)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(PrecioP8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                                .addGap(18, 18, 18)
+                                .addComponent(PrecioP7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                         .addGap(18, 18, 18)
-                        .addComponent(jLabel26))
+                        .addComponent(Carro4))
                     .addGroup(Producto8Layout.createSequentialGroup()
                         .addGap(8, 8, 8)
                         .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -256,7 +277,7 @@ public class BusquedaProductos extends VentanaBase {
             Producto8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(Producto8Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(TituloP8)
+                .addComponent(TituloP7)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -264,16 +285,16 @@ public class BusquedaProductos extends VentanaBase {
                     .addGroup(Producto8Layout.createSequentialGroup()
                         .addGroup(Producto8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(PrecioLbl7)
-                            .addComponent(PrecioP8))
+                            .addComponent(PrecioP7))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(Producto8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(CntLbl7)
-                            .addComponent(CantidadP8)))
-                    .addComponent(jLabel26))
+                            .addComponent(CantidadP7)))
+                    .addComponent(Carro4))
                 .addContainerGap(17, Short.MAX_VALUE))
         );
 
-        jPanel11.add(Producto8, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 480, 200, 200));
+        jPanel11.add(Producto8, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 410, 200, 200));
 
         Producto6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
@@ -291,37 +312,43 @@ public class BusquedaProductos extends VentanaBase {
 
         jLabel18.setText("ImagArticulo");
 
-        jLabel24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Iconos/shopcart.png"))); // NOI18N
+        Carro3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Iconos/shopcart.png"))); // NOI18N
+        Carro3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Carro3MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout Producto6Layout = new javax.swing.GroupLayout(Producto6);
         Producto6.setLayout(Producto6Layout);
         Producto6Layout.setHorizontalGroup(
             Producto6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(Producto6Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(TituloP6)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(Producto6Layout.createSequentialGroup()
-                .addGroup(Producto6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(Producto6Layout.createSequentialGroup()
-                        .addGap(12, 12, 12)
-                        .addComponent(PrecioLbl4))
-                    .addGroup(Producto6Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(CntLbl5)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(Producto6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(PrecioP6, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(CantidadP6, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Producto6Layout.createSequentialGroup()
                 .addContainerGap(37, Short.MAX_VALUE)
                 .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(32, 32, 32))
+            .addGroup(Producto6Layout.createSequentialGroup()
+                .addGroup(Producto6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(Producto6Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(TituloP6))
+                    .addGroup(Producto6Layout.createSequentialGroup()
+                        .addGroup(Producto6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(Producto6Layout.createSequentialGroup()
+                                .addGap(12, 12, 12)
+                                .addComponent(PrecioLbl4))
+                            .addGroup(Producto6Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(CntLbl5)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(Producto6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(PrecioP6, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(CantidadP6, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(Producto6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Producto6Layout.createSequentialGroup()
                     .addContainerGap(134, Short.MAX_VALUE)
-                    .addComponent(jLabel24)
+                    .addComponent(Carro3)
                     .addGap(20, 20, 20)))
         );
         Producto6Layout.setVerticalGroup(
@@ -344,29 +371,34 @@ public class BusquedaProductos extends VentanaBase {
             .addGroup(Producto6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Producto6Layout.createSequentialGroup()
                     .addContainerGap(146, Short.MAX_VALUE)
-                    .addComponent(jLabel24)
+                    .addComponent(Carro3)
                     .addContainerGap()))
         );
 
-        jPanel11.add(Producto6, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 480, -1, 199));
+        jPanel11.add(Producto6, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 410, -1, 199));
 
         Producto7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        TituloP7.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        TituloP7.setText("jLabel8");
+        TituloP8.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        TituloP8.setText("jLabel8");
 
         PrecioLbl6.setText("Precio");
 
         CntLbl6.setText("Cantidad");
 
-        PrecioP7.setFont(new java.awt.Font("Tahoma", 3, 11)); // NOI18N
-        PrecioP7.setText("jLabel21");
-
-        CantidadP7.setText("jLabel22");
-
         jLabel19.setText("ImagArticulo");
 
-        jLabel23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Iconos/shopcart.png"))); // NOI18N
+        Carro5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Iconos/shopcart.png"))); // NOI18N
+        Carro5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Carro5MouseClicked(evt);
+            }
+        });
+
+        PrecioP8.setFont(new java.awt.Font("Tahoma", 3, 11)); // NOI18N
+        PrecioP8.setText("jLabel17");
+
+        CantidadP8.setText("jLabel18");
 
         javax.swing.GroupLayout Producto7Layout = new javax.swing.GroupLayout(Producto7);
         Producto7.setLayout(Producto7Layout);
@@ -376,20 +408,21 @@ public class BusquedaProductos extends VentanaBase {
                 .addContainerGap()
                 .addGroup(Producto7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(Producto7Layout.createSequentialGroup()
-                        .addComponent(TituloP7)
+                        .addComponent(TituloP8)
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Producto7Layout.createSequentialGroup()
                         .addGroup(Producto7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(Producto7Layout.createSequentialGroup()
                                 .addComponent(CntLbl6)
-                                .addGap(18, 18, 18)
-                                .addComponent(CantidadP7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(CantidadP8, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 21, Short.MAX_VALUE))
                             .addGroup(Producto7Layout.createSequentialGroup()
                                 .addComponent(PrecioLbl6)
-                                .addGap(18, 18, 18)
-                                .addComponent(PrecioP7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                        .addGap(33, 33, 33)
-                        .addComponent(jLabel23)))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(PrecioP8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(Carro5)))
                 .addContainerGap())
             .addGroup(Producto7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(Producto7Layout.createSequentialGroup()
@@ -401,18 +434,18 @@ public class BusquedaProductos extends VentanaBase {
             Producto7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(Producto7Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(TituloP7)
+                .addComponent(TituloP8)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 122, Short.MAX_VALUE)
                 .addGroup(Producto7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel23)
+                    .addComponent(Carro5)
                     .addGroup(Producto7Layout.createSequentialGroup()
                         .addGroup(Producto7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(PrecioLbl6)
-                            .addComponent(PrecioP7))
+                            .addComponent(PrecioP8, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(Producto7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(CntLbl6)
-                            .addComponent(CantidadP7))))
+                            .addComponent(CantidadP8))))
                 .addContainerGap())
             .addGroup(Producto7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(Producto7Layout.createSequentialGroup()
@@ -421,7 +454,7 @@ public class BusquedaProductos extends VentanaBase {
                     .addContainerGap(53, Short.MAX_VALUE)))
         );
 
-        jPanel11.add(Producto7, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 480, -1, 200));
+        jPanel11.add(Producto7, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 410, -1, 200));
 
         Producto4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
@@ -439,7 +472,12 @@ public class BusquedaProductos extends VentanaBase {
 
         jLabel3.setText("ImagArticulo");
 
-        jLabel21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Iconos/shopcart.png"))); // NOI18N
+        Carro1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Iconos/shopcart.png"))); // NOI18N
+        Carro1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Carro1MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout Producto4Layout = new javax.swing.GroupLayout(Producto4);
         Producto4.setLayout(Producto4Layout);
@@ -460,7 +498,7 @@ public class BusquedaProductos extends VentanaBase {
                                 .addGap(18, 18, 18)
                                 .addComponent(PrecioP4, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
-                        .addComponent(jLabel21))
+                        .addComponent(Carro1))
                     .addGroup(Producto4Layout.createSequentialGroup()
                         .addGap(34, 34, 34)
                         .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -479,14 +517,15 @@ public class BusquedaProductos extends VentanaBase {
                     .addComponent(PrecioLbl5)
                     .addComponent(PrecioP4))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(Producto4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(CntLbl4)
-                    .addComponent(CantidadP4)
-                    .addComponent(jLabel21))
+                .addGroup(Producto4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(Carro1)
+                    .addGroup(Producto4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(CntLbl4)
+                        .addComponent(CantidadP4)))
                 .addContainerGap())
         );
 
-        jPanel11.add(Producto4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 480, 200, 199));
+        jPanel11.add(Producto4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 410, 200, 199));
 
         Producto5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
@@ -504,7 +543,12 @@ public class BusquedaProductos extends VentanaBase {
 
         jLabel8.setText("ImagArticulo");
 
-        jLabel22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Iconos/shopcart.png"))); // NOI18N
+        Carro2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Iconos/shopcart.png"))); // NOI18N
+        Carro2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Carro2MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout Producto5Layout = new javax.swing.GroupLayout(Producto5);
         Producto5.setLayout(Producto5Layout);
@@ -522,7 +566,7 @@ public class BusquedaProductos extends VentanaBase {
                             .addComponent(CantidadP5, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(PrecioP5, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 9, Short.MAX_VALUE)
-                        .addComponent(jLabel22))
+                        .addComponent(Carro2))
                     .addGroup(Producto5Layout.createSequentialGroup()
                         .addGroup(Producto5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(Producto5Layout.createSequentialGroup()
@@ -539,7 +583,7 @@ public class BusquedaProductos extends VentanaBase {
                 .addGroup(Producto5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(Producto5Layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jLabel22))
+                        .addComponent(Carro2))
                     .addGroup(Producto5Layout.createSequentialGroup()
                         .addComponent(TituloP5)
                         .addGap(12, 12, 12)
@@ -555,7 +599,7 @@ public class BusquedaProductos extends VentanaBase {
                 .addContainerGap())
         );
 
-        jPanel11.add(Producto5, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 480, -1, 199));
+        jPanel11.add(Producto5, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 410, -1, 199));
 
         SiguienteBtn.setBackground(new java.awt.Color(255, 153, 0));
         SiguienteBtn.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
@@ -565,7 +609,7 @@ public class BusquedaProductos extends VentanaBase {
                 SiguienteBtnActionPerformed(evt);
             }
         });
-        jPanel11.add(SiguienteBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(1280, 560, -1, 35));
+        jPanel11.add(SiguienteBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(1290, 470, -1, 35));
 
         CategoriaBox.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         CategoriaBox.setForeground(new java.awt.Color(102, 102, 102));
@@ -578,7 +622,7 @@ public class BusquedaProductos extends VentanaBase {
 
         jLabel12.setFont(new java.awt.Font("Times New Roman", 3, 24)); // NOI18N
         jLabel12.setText("Lo más buscado:");
-        jPanel11.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 430, 186, -1));
+        jPanel11.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 370, 186, -1));
 
         jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Iconos/imagenPrincipal.png"))); // NOI18N
         jLabel13.setText("jLabel13");
@@ -586,7 +630,7 @@ public class BusquedaProductos extends VentanaBase {
 
         jLabel14.setFont(new java.awt.Font("Times New Roman", 3, 24)); // NOI18N
         jLabel14.setText("¿Aún no tienes cuenta?");
-        jPanel11.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 390, -1, -1));
+        jPanel11.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 360, -1, -1));
 
         jButton1.setBackground(new java.awt.Color(255, 204, 0));
         jButton1.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
@@ -596,7 +640,7 @@ public class BusquedaProductos extends VentanaBase {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel11.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 380, 181, 48));
+        jPanel11.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 350, 181, 48));
 
         jLabel15.setFont(new java.awt.Font("Times New Roman", 3, 48)); // NOI18N
         jLabel15.setText("¡Encuentra lo que buscas!");
@@ -623,7 +667,12 @@ public class BusquedaProductos extends VentanaBase {
 
         jLabel17.setText("ImagArticulo");
 
-        jLabel27.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Iconos/shopcart.png"))); // NOI18N
+        carro6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Iconos/shopcart.png"))); // NOI18N
+        carro6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                carro6MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout Producto9Layout = new javax.swing.GroupLayout(Producto9);
         Producto9.setLayout(Producto9Layout);
@@ -646,7 +695,7 @@ public class BusquedaProductos extends VentanaBase {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(CantidadP9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel27)))
+                        .addComponent(carro6)))
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Producto9Layout.createSequentialGroup()
                 .addContainerGap(44, Short.MAX_VALUE)
@@ -671,16 +720,35 @@ public class BusquedaProductos extends VentanaBase {
                             .addComponent(CntLbl8)
                             .addComponent(CantidadP9)))
                     .addGroup(Producto9Layout.createSequentialGroup()
-                        .addComponent(jLabel27)
+                        .addComponent(carro6)
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
 
-        jPanel11.add(Producto9, new org.netbeans.lib.awtextra.AbsoluteConstraints(1070, 480, 200, -1));
+        jPanel11.add(Producto9, new org.netbeans.lib.awtextra.AbsoluteConstraints(1070, 410, 200, -1));
 
         jScrollPane1.setViewportView(jPanel11);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 1370, 520));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 1370, 700));
+
+        jMenu3.setText("Comprador");
+
+        jMenu6.setText("Ver Carrito de Compras");
+        jMenu6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jMenu6MouseClicked(evt);
+            }
+        });
+        jMenu3.add(jMenu6);
+
+        jMenuBar1.add(jMenu3);
+
+        jMenu4.setText("Inventario");
+        jMenuBar1.add(jMenu4);
+
+        jMenu5.setText("Administrador");
+        jMenuBar1.add(jMenu5);
+
         setJMenuBar(jMenuBar1);
 
         pack();
@@ -697,10 +765,10 @@ public class BusquedaProductos extends VentanaBase {
          System.out.println(productosCoincidentes);
          
          if (!productosCoincidentes.equals("")) {
-             
-         
+
         productos= productosCoincidentes.split("/");
         int cantidadProductosCoincidentes = productos.length;
+        System.out.println(productos.length);
         System.out.println("Hay " + cantidadProductosCoincidentes + " productos validos.");
         
        for (int k = 0 ; k < 9 ; k++ ) {
@@ -729,12 +797,12 @@ public class BusquedaProductos extends VentanaBase {
                              CantidadP6.setText(productoMuleta[4]);
                              break;
                    case 7: Producto7.setVisible(true);
-                             TituloP7.setText(productoMuleta[0]);
+                             TituloP8.setText(productoMuleta[0]);
                              PrecioP7.setText(productoMuleta[1]);
                              CantidadP7.setText(productoMuleta[4]);
                              break;
                    case 8: Producto8.setVisible(true);
-                             TituloP8.setText(productoMuleta[0]);
+                             TituloP7.setText(productoMuleta[0]);
                              PrecioP8.setText(productoMuleta[1]);
                              CantidadP8.setText(productoMuleta[4]);
                              break;
@@ -751,7 +819,7 @@ public class BusquedaProductos extends VentanaBase {
            
        }
          }
-       System.out.println(posicionAct);
+     //  System.out.println(posicionAct);
     }
     
     private void SiguienteBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SiguienteBtnActionPerformed
@@ -794,12 +862,12 @@ public class BusquedaProductos extends VentanaBase {
                                                              CantidadP6.setText(productoMuleta[4]);
                                                              break;
                                                    case 7: Producto7.setVisible(true);
-                                                             TituloP7.setText(productoMuleta[0]);
+                                                             TituloP8.setText(productoMuleta[0]);
                                                              PrecioP7.setText(productoMuleta[1]);
                                                              CantidadP7.setText(productoMuleta[4]);
                                                              break;
                                                    case 8: Producto8.setVisible(true);
-                                                             TituloP8.setText(productoMuleta[0]);
+                                                             TituloP7.setText(productoMuleta[0]);
                                                              PrecioP8.setText(productoMuleta[1]);
                                                              CantidadP8.setText(productoMuleta[4]);
                                                              break;
@@ -855,6 +923,45 @@ public class BusquedaProductos extends VentanaBase {
         registro.setFatherWindow(this, true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    private void Carro1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Carro1MouseClicked
+        
+        productosCarrito = productosCarrito + TituloP4.getText() + ";" + "1" + ";"+ PrecioP4.getText() + ":" ;
+        System.out.println("Producto añadido al carrito!");
+    }//GEN-LAST:event_Carro1MouseClicked
+
+    private void Carro2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Carro2MouseClicked
+        productosCarrito = productosCarrito + TituloP5.getText() + ";" + "1" + ";"+ PrecioP5.getText() + ":" ;
+        System.out.println("Producto añadido al carrito!");
+    }//GEN-LAST:event_Carro2MouseClicked
+
+    private void Carro3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Carro3MouseClicked
+        productosCarrito = productosCarrito + TituloP6.getText() + ";" + "1" + ";"+ PrecioP6.getText() + ":" ;
+            System.out.println("Producto añadido al carrito!");
+    }//GEN-LAST:event_Carro3MouseClicked
+
+    private void Carro4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Carro4MouseClicked
+        productosCarrito = productosCarrito + TituloP7.getText() + ";" + "1" + ";"+ PrecioP7.getText() + ":" ;
+            System.out.println("Producto añadido al carrito!");
+    }//GEN-LAST:event_Carro4MouseClicked
+
+    private void Carro5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Carro5MouseClicked
+      productosCarrito = productosCarrito + TituloP8.getText() + ";" + "1" + ";"+ PrecioP8.getText() + ":" ;
+           System.out.println("Producto añadido al carrito!");
+    }//GEN-LAST:event_Carro5MouseClicked
+
+    private void carro6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_carro6MouseClicked
+       productosCarrito = productosCarrito + TituloP9.getText() + ";" + "1" + ";"+ PrecioP9.getText() + ":" ;
+            System.out.println("Producto añadido al carrito!");
+    }//GEN-LAST:event_carro6MouseClicked
+
+    private void jMenu6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu6MouseClicked
+        System.out.println(productosCarrito);
+        VentanaCarrito ventana = new VentanaCarrito(productosCarrito);
+        ventana.setFatherWindow(this, true);
+        ventana.setVisible(true);
+        
+    }//GEN-LAST:event_jMenu6MouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -886,6 +993,8 @@ public class BusquedaProductos extends VentanaBase {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new BusquedaProductos().setVisible(true);
+                
+              
             
                       
                 
@@ -902,6 +1011,11 @@ public class BusquedaProductos extends VentanaBase {
     private javax.swing.JLabel CantidadP7;
     private javax.swing.JLabel CantidadP8;
     private javax.swing.JLabel CantidadP9;
+    private javax.swing.JLabel Carro1;
+    private javax.swing.JLabel Carro2;
+    private javax.swing.JLabel Carro3;
+    private javax.swing.JLabel Carro4;
+    private javax.swing.JLabel Carro5;
     private javax.swing.JComboBox CategoriaBox;
     private javax.swing.JLabel CategoriaLbl;
     private javax.swing.JLabel CntLbl3;
@@ -939,6 +1053,7 @@ public class BusquedaProductos extends VentanaBase {
     private javax.swing.JLabel TituloP8;
     private javax.swing.JLabel TituloP9;
     private javax.swing.JLabel TituloRegistro;
+    private javax.swing.JLabel carro6;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -953,12 +1068,6 @@ public class BusquedaProductos extends VentanaBase {
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
-    private javax.swing.JLabel jLabel21;
-    private javax.swing.JLabel jLabel22;
-    private javax.swing.JLabel jLabel23;
-    private javax.swing.JLabel jLabel24;
-    private javax.swing.JLabel jLabel26;
-    private javax.swing.JLabel jLabel27;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -966,7 +1075,14 @@ public class BusquedaProductos extends VentanaBase {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenu jMenu3;
+    private javax.swing.JMenu jMenu4;
+    private javax.swing.JMenu jMenu5;
+    private javax.swing.JMenu jMenu6;
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuBar jMenuBar2;
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;
     private javax.swing.JScrollPane jScrollPane1;

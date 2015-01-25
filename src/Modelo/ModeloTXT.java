@@ -334,7 +334,7 @@ public static String devolverProducto() {
                           while((textoLinea = memoriaParaLectura.readLine())!=null)
                           {
                                         System.out.println("Linea que deberia devolver:" + textoLinea);
-                                        lineafinal = lineafinal + textoLinea + ";"; 
+                                        lineafinal = lineafinal + textoLinea + "/"; 
                            }
 			return (lineafinal);		
 				} catch (IOException e) {

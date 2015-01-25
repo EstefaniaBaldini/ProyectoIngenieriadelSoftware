@@ -29,10 +29,11 @@ public class ModeloBusqueda {
             
              stringChequeo = productosSeparados[i].split(";");
               log.info("Se realia el FOR para recorrer los productos");
-              if (((stringChequeo[3].equals(categoria))  && (stringChequeo[0].contains(nombre))) && (stringChequeo[5].equals("Disponible"))) {
+              if ((((stringChequeo[3].equals(categoria)) || (stringChequeo[0].contains(nombre)))) && (stringChequeo[5].equals("Disponible"))) {
                    // Si las categorias son las mismas, es un producto que debera aparecer en la ventana y si esta disponible tambien!
                   
                   productosFinales = productosFinales + "/" + productosSeparados[i];
+                  System.out.println(productosSeparados[i] + "  añadido");
                   log.info("Hay un arreglo con todos los productos juntos");
               } 
         }

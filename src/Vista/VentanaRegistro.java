@@ -52,7 +52,6 @@ public class VentanaRegistro extends VentanaBase {
         EtiquetaApellido = new javax.swing.JLabel();
         ContrasenaPassfield = new javax.swing.JPasswordField();
         EtiquetaError = new javax.swing.JLabel();
-        DoB = new com.toedter.calendar.JDateChooser();
         EtiquetaContraseña = new javax.swing.JLabel();
         EtiquetaCedula = new javax.swing.JLabel();
         VECombo = new javax.swing.JComboBox();
@@ -70,10 +69,10 @@ public class VentanaRegistro extends VentanaBase {
         jLabel3 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
+        DoB = new com.toedter.calendar.JDateChooser();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
-        setPreferredSize(new java.awt.Dimension(1350, 720));
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -121,9 +120,6 @@ public class VentanaRegistro extends VentanaBase {
 
         EtiquetaError.setText("*EtiquetaERROR*");
         jPanel1.add(EtiquetaError, new org.netbeans.lib.awtextra.AbsoluteConstraints(114, 118, -1, -1));
-
-        DoB.setMaxSelectableDate(new java.util.Date(852094869000L));
-        jPanel1.add(DoB, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 240, 234, 29));
 
         EtiquetaContraseña.setText("Contraseña");
         jPanel1.add(EtiquetaContraseña, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 330, -1, -1));
@@ -191,6 +187,7 @@ public class VentanaRegistro extends VentanaBase {
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Iconos/credit-cardsmall.png"))); // NOI18N
         jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 380, -1, -1));
+        jPanel1.add(DoB, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 250, 230, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
