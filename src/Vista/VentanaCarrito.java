@@ -82,9 +82,6 @@ public class VentanaCarrito extends VentanaBase {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        IniciarSesionLbl = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        RegistrateLbl = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel20 = new javax.swing.JLabel();
@@ -142,31 +139,6 @@ public class VentanaCarrito extends VentanaBase {
         jPanel10.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1144, 11, -1, 189));
         jPanel10.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 176, -1, -1));
         jPanel10.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(16, 151, -1, 48));
-
-        IniciarSesionLbl.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        IniciarSesionLbl.setForeground(new java.awt.Color(255, 204, 51));
-        IniciarSesionLbl.setText("Ingresa");
-        IniciarSesionLbl.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                IniciarSesionLblMouseClicked(evt);
-            }
-        });
-        jPanel10.add(IniciarSesionLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(1270, 60, -1, -1));
-
-        jLabel7.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(255, 204, 51));
-        jLabel7.setText("/");
-        jPanel10.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(1260, 60, -1, -1));
-
-        RegistrateLbl.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        RegistrateLbl.setForeground(new java.awt.Color(255, 204, 51));
-        RegistrateLbl.setText("Inscribete");
-        RegistrateLbl.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                RegistrateLblMouseClicked(evt);
-            }
-        });
-        jPanel10.add(RegistrateLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(1190, 60, -1, -1));
         jPanel10.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(22, 199, -1, -1));
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Iconos/logoP.png"))); // NOI18N
@@ -213,27 +185,26 @@ public class VentanaCarrito extends VentanaBase {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel10, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(97, 97, 97)
+            .addComponent(jPanel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jButton1)
-                        .addGap(80, 80, 80))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 561, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(112, Short.MAX_VALUE))))
+                        .addGap(354, 354, 354))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(jButton1)
+                        .addGap(335, 335, 335))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(jPanel10, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(31, 31, 31)
+                .addGap(55, 55, 55)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(135, 135, 135)
+                .addGap(71, 71, 71)
                 .addComponent(jButton1)
-                .addContainerGap(33, Short.MAX_VALUE))
+                .addContainerGap(276, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -248,26 +219,11 @@ public class VentanaCarrito extends VentanaBase {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 11, Short.MAX_VALUE))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void RegistrateLblMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_RegistrateLblMouseClicked
-
-        VentanaRegistro registro = new VentanaRegistro();
-        registro.setVisible(true);
-        registro.setFatherWindow(this, true);
-
-    }//GEN-LAST:event_RegistrateLblMouseClicked
-
-    private void IniciarSesionLblMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_IniciarSesionLblMouseClicked
-
-        VentanaInicioSesion iniciosesion = new VentanaInicioSesion();
-        iniciosesion.setVisible(true);
-        iniciosesion.setFatherWindow(this, true);
-    }//GEN-LAST:event_IniciarSesionLblMouseClicked
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         
@@ -323,8 +279,6 @@ public class VentanaCarrito extends VentanaBase {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTable CarritoCompras;
-    private javax.swing.JLabel IniciarSesionLbl;
-    private javax.swing.JLabel RegistrateLbl;
     private javax.swing.JLabel TituloRegistro;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
@@ -332,7 +286,6 @@ public class VentanaCarrito extends VentanaBase {
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;

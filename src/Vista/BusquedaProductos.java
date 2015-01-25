@@ -34,7 +34,7 @@ public class BusquedaProductos extends VentanaBase {
         Producto7.setVisible(false);
         Producto8.setVisible(false);
         Producto9.setVisible(false);
-  
+        setLocationRelativeTo(null);
     
         
     }
@@ -63,8 +63,6 @@ public class BusquedaProductos extends VentanaBase {
         LineaBusquedaTXT = new javax.swing.JTextField();
         BuscarLbl = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        AdminLbl = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
         jLabel20 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jPanel11 = new javax.swing.JPanel();
@@ -130,7 +128,9 @@ public class BusquedaProductos extends VentanaBase {
         jMenu3 = new javax.swing.JMenu();
         jMenu6 = new javax.swing.JMenu();
         jMenu4 = new javax.swing.JMenu();
+        jMenu7 = new javax.swing.JMenu();
         jMenu5 = new javax.swing.JMenu();
+        jMenu8 = new javax.swing.JMenu();
 
         jMenu1.setText("File");
         jMenuBar2.add(jMenu1);
@@ -160,12 +160,12 @@ public class BusquedaProductos extends VentanaBase {
                 IniciarSesionLblMouseClicked(evt);
             }
         });
-        jPanel10.add(IniciarSesionLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(1150, 50, -1, -1));
+        jPanel10.add(IniciarSesionLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(1290, 60, -1, -1));
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 204, 51));
         jLabel7.setText("/");
-        jPanel10.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(1140, 50, -1, -1));
+        jPanel10.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(1280, 60, -1, -1));
 
         RegistrateLbl.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         RegistrateLbl.setForeground(new java.awt.Color(255, 204, 51));
@@ -175,7 +175,7 @@ public class BusquedaProductos extends VentanaBase {
                 RegistrateLblMouseClicked(evt);
             }
         });
-        jPanel10.add(RegistrateLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(1070, 50, -1, -1));
+        jPanel10.add(RegistrateLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(1210, 60, -1, -1));
         jPanel10.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(22, 199, -1, -1));
 
         LineaBusquedaTXT.addActionListener(new java.awt.event.ActionListener() {
@@ -196,21 +196,6 @@ public class BusquedaProductos extends VentanaBase {
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Iconos/logoP.png"))); // NOI18N
         jPanel10.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(54, 0, -1, -1));
 
-        AdminLbl.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        AdminLbl.setForeground(new java.awt.Color(255, 204, 0));
-        AdminLbl.setText("Vender");
-        AdminLbl.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                AdminLblMouseClicked(evt);
-            }
-        });
-        jPanel10.add(AdminLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(1220, 50, -1, -1));
-
-        jLabel11.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel11.setForeground(new java.awt.Color(255, 204, 51));
-        jLabel11.setText("/");
-        jPanel10.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(1210, 50, -1, -1));
-
         jLabel20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Iconos/separador.png"))); // NOI18N
         jLabel20.setText("jLabel20");
         jPanel10.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 90, 1370, -1));
@@ -224,6 +209,7 @@ public class BusquedaProductos extends VentanaBase {
         jPanel11.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         jPanel11.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(1117, 265, -1, -1));
 
+        Producto8.setBackground(new java.awt.Color(255, 255, 255));
         Producto8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         TituloP7.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
@@ -233,7 +219,7 @@ public class BusquedaProductos extends VentanaBase {
 
         CntLbl7.setText("Cantidad");
 
-        jLabel10.setText("ImagArticulo");
+        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Iconos/obturador.jpg"))); // NOI18N
 
         Carro4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Iconos/shopcart.png"))); // NOI18N
         Carro4.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -252,10 +238,9 @@ public class BusquedaProductos extends VentanaBase {
         Producto8Layout.setHorizontalGroup(
             Producto8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(Producto8Layout.createSequentialGroup()
-                .addContainerGap()
                 .addGroup(Producto8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(TituloP7)
                     .addGroup(Producto8Layout.createSequentialGroup()
+                        .addContainerGap()
                         .addGroup(Producto8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(Producto8Layout.createSequentialGroup()
                                 .addComponent(CntLbl7)
@@ -269,19 +254,24 @@ public class BusquedaProductos extends VentanaBase {
                         .addGap(18, 18, 18)
                         .addComponent(Carro4))
                     .addGroup(Producto8Layout.createSequentialGroup()
-                        .addGap(8, 8, 8)
-                        .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addContainerGap()
+                        .addComponent(TituloP7)))
                 .addContainerGap(19, Short.MAX_VALUE))
+            .addGroup(Producto8Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         Producto8Layout.setVerticalGroup(
             Producto8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(Producto8Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(TituloP7)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(11, 11, 11)
+                .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(Producto8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(Carro4)
                     .addGroup(Producto8Layout.createSequentialGroup()
                         .addGroup(Producto8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(PrecioLbl7)
@@ -289,13 +279,13 @@ public class BusquedaProductos extends VentanaBase {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(Producto8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(CntLbl7)
-                            .addComponent(CantidadP7)))
-                    .addComponent(Carro4))
-                .addContainerGap(17, Short.MAX_VALUE))
+                            .addComponent(CantidadP7))))
+                .addContainerGap(12, Short.MAX_VALUE))
         );
 
-        jPanel11.add(Producto8, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 410, 200, 200));
+        jPanel11.add(Producto8, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 170, 200, 200));
 
+        Producto6.setBackground(new java.awt.Color(255, 255, 255));
         Producto6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         TituloP6.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
@@ -310,7 +300,7 @@ public class BusquedaProductos extends VentanaBase {
 
         CantidadP6.setText("jLabel12");
 
-        jLabel18.setText("ImagArticulo");
+        jLabel18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Iconos/obturador.jpg"))); // NOI18N
 
         Carro3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Iconos/shopcart.png"))); // NOI18N
         Carro3.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -323,15 +313,8 @@ public class BusquedaProductos extends VentanaBase {
         Producto6.setLayout(Producto6Layout);
         Producto6Layout.setHorizontalGroup(
             Producto6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Producto6Layout.createSequentialGroup()
-                .addContainerGap(37, Short.MAX_VALUE)
-                .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(32, 32, 32))
             .addGroup(Producto6Layout.createSequentialGroup()
                 .addGroup(Producto6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(Producto6Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(TituloP6))
                     .addGroup(Producto6Layout.createSequentialGroup()
                         .addGroup(Producto6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(Producto6Layout.createSequentialGroup()
@@ -343,8 +326,13 @@ public class BusquedaProductos extends VentanaBase {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(Producto6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(PrecioP6, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(CantidadP6, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(CantidadP6, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(Producto6Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(Producto6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(TituloP6)
+                            .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(51, Short.MAX_VALUE))
             .addGroup(Producto6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Producto6Layout.createSequentialGroup()
                     .addContainerGap(134, Short.MAX_VALUE)
@@ -357,8 +345,8 @@ public class BusquedaProductos extends VentanaBase {
                 .addContainerGap()
                 .addComponent(TituloP6)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 12, Short.MAX_VALUE)
-                .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(Producto6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(PrecioP6, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(PrecioLbl4, javax.swing.GroupLayout.Alignment.TRAILING))
@@ -375,8 +363,9 @@ public class BusquedaProductos extends VentanaBase {
                     .addContainerGap()))
         );
 
-        jPanel11.add(Producto6, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 410, -1, 199));
+        jPanel11.add(Producto6, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 170, -1, 199));
 
+        Producto7.setBackground(new java.awt.Color(255, 255, 255));
         Producto7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         TituloP8.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
@@ -386,7 +375,7 @@ public class BusquedaProductos extends VentanaBase {
 
         CntLbl6.setText("Cantidad");
 
-        jLabel19.setText("ImagArticulo");
+        jLabel19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Iconos/obturador.jpg"))); // NOI18N
 
         Carro5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Iconos/shopcart.png"))); // NOI18N
         Carro5.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -407,9 +396,6 @@ public class BusquedaProductos extends VentanaBase {
             .addGroup(Producto7Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(Producto7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(Producto7Layout.createSequentialGroup()
-                        .addComponent(TituloP8)
-                        .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Producto7Layout.createSequentialGroup()
                         .addGroup(Producto7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(Producto7Layout.createSequentialGroup()
@@ -422,20 +408,22 @@ public class BusquedaProductos extends VentanaBase {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(PrecioP8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(Carro5)))
+                        .addComponent(Carro5))
+                    .addGroup(Producto7Layout.createSequentialGroup()
+                        .addGroup(Producto7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(TituloP8))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
-            .addGroup(Producto7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(Producto7Layout.createSequentialGroup()
-                    .addGap(34, 34, 34)
-                    .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(35, Short.MAX_VALUE)))
         );
         Producto7Layout.setVerticalGroup(
             Producto7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(Producto7Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(TituloP8)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 122, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 12, Short.MAX_VALUE)
+                .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(Producto7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(Carro5)
                     .addGroup(Producto7Layout.createSequentialGroup()
@@ -447,15 +435,11 @@ public class BusquedaProductos extends VentanaBase {
                             .addComponent(CntLbl6)
                             .addComponent(CantidadP8))))
                 .addContainerGap())
-            .addGroup(Producto7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(Producto7Layout.createSequentialGroup()
-                    .addGap(53, 53, 53)
-                    .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(53, Short.MAX_VALUE)))
         );
 
-        jPanel11.add(Producto7, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 410, -1, 200));
+        jPanel11.add(Producto7, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 170, -1, 200));
 
+        Producto4.setBackground(new java.awt.Color(255, 255, 255));
         Producto4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         TituloP4.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
@@ -470,7 +454,7 @@ public class BusquedaProductos extends VentanaBase {
 
         CantidadP4.setText("jLabel20");
 
-        jLabel3.setText("ImagArticulo");
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Iconos/obturador.jpg"))); // NOI18N
 
         Carro1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Iconos/shopcart.png"))); // NOI18N
         Carro1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -484,9 +468,12 @@ public class BusquedaProductos extends VentanaBase {
         Producto4Layout.setHorizontalGroup(
             Producto4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(Producto4Layout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(Producto4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(Producto4Layout.createSequentialGroup()
-                        .addContainerGap()
+                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(Producto4Layout.createSequentialGroup()
                         .addGroup(Producto4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(Producto4Layout.createSequentialGroup()
                                 .addComponent(CntLbl4)
@@ -498,11 +485,7 @@ public class BusquedaProductos extends VentanaBase {
                                 .addGap(18, 18, 18)
                                 .addComponent(PrecioP4, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
-                        .addComponent(Carro1))
-                    .addGroup(Producto4Layout.createSequentialGroup()
-                        .addGap(34, 34, 34)
-                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                        .addComponent(Carro1)))
                 .addContainerGap())
         );
         Producto4Layout.setVerticalGroup(
@@ -510,23 +493,25 @@ public class BusquedaProductos extends VentanaBase {
             .addGroup(Producto4Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(TituloP4)
+                .addGap(11, 11, 11)
+                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, 84, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(Producto4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(PrecioLbl5)
-                    .addComponent(PrecioP4))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(Producto4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(Carro1)
-                    .addGroup(Producto4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(CntLbl4)
-                        .addComponent(CantidadP4)))
+                    .addGroup(Producto4Layout.createSequentialGroup()
+                        .addGroup(Producto4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(PrecioLbl5)
+                            .addComponent(PrecioP4))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(Producto4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(CntLbl4)
+                            .addComponent(CantidadP4))))
                 .addContainerGap())
         );
 
-        jPanel11.add(Producto4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 410, 200, 199));
+        jPanel11.add(Producto4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 170, 200, 199));
 
+        Producto5.setBackground(new java.awt.Color(255, 255, 255));
         Producto5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         TituloP5.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
@@ -541,7 +526,7 @@ public class BusquedaProductos extends VentanaBase {
 
         CantidadP5.setText("jLabel16");
 
-        jLabel8.setText("ImagArticulo");
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Iconos/obturador.jpg"))); // NOI18N
 
         Carro2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Iconos/shopcart.png"))); // NOI18N
         Carro2.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -599,7 +584,7 @@ public class BusquedaProductos extends VentanaBase {
                 .addContainerGap())
         );
 
-        jPanel11.add(Producto5, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 410, -1, 199));
+        jPanel11.add(Producto5, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 170, -1, 199));
 
         SiguienteBtn.setBackground(new java.awt.Color(255, 153, 0));
         SiguienteBtn.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
@@ -609,28 +594,28 @@ public class BusquedaProductos extends VentanaBase {
                 SiguienteBtnActionPerformed(evt);
             }
         });
-        jPanel11.add(SiguienteBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(1290, 470, -1, 35));
+        jPanel11.add(SiguienteBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(1300, 250, -1, 35));
 
         CategoriaBox.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         CategoriaBox.setForeground(new java.awt.Color(102, 102, 102));
         CategoriaBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Accesorios Vehiculos", "Animales y Mascotas", "Bebes", "Camaras y Accesorios", "Celulares y Telefonos", "Coleccionables y Hobbies", "Computacion", "Consolas y Videojuegos", "Deportes y Fitness", "Electrodomesticos", "Electronica, Audio y Video", "Hogar y Muebles", "Industrias", "Instrumentos Musicales", "Juguetes", "Libros, Musica y Peliculas", "Relojes, Joyas y Bisuteria", "Ropa, Zapatos y Accesorios", "Salud y Belleza" }));
-        jPanel11.add(CategoriaBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 130, 250, 31));
+        jPanel11.add(CategoriaBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 80, 250, 31));
 
         CategoriaLbl.setFont(new java.awt.Font("Times New Roman", 3, 24)); // NOI18N
         CategoriaLbl.setText("Categorias");
-        jPanel11.add(CategoriaLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 130, -1, -1));
+        jPanel11.add(CategoriaLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 90, -1, -1));
 
         jLabel12.setFont(new java.awt.Font("Times New Roman", 3, 24)); // NOI18N
-        jLabel12.setText("Lo más buscado:");
-        jPanel11.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 370, 186, -1));
+        jLabel12.setText("Productos:");
+        jPanel11.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 140, 186, -1));
 
         jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Iconos/imagenPrincipal.png"))); // NOI18N
         jLabel13.setText("jLabel13");
-        jPanel11.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 210, 888, -1));
+        jPanel11.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 380, 888, -1));
 
         jLabel14.setFont(new java.awt.Font("Times New Roman", 3, 24)); // NOI18N
         jLabel14.setText("¿Aún no tienes cuenta?");
-        jPanel11.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 360, -1, -1));
+        jPanel11.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 530, -1, -1));
 
         jButton1.setBackground(new java.awt.Color(255, 204, 0));
         jButton1.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
@@ -640,7 +625,7 @@ public class BusquedaProductos extends VentanaBase {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel11.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 350, 181, 48));
+        jPanel11.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 520, 181, 48));
 
         jLabel15.setFont(new java.awt.Font("Times New Roman", 3, 48)); // NOI18N
         jLabel15.setText("¡Encuentra lo que buscas!");
@@ -649,8 +634,9 @@ public class BusquedaProductos extends VentanaBase {
         jLabel16.setFont(new java.awt.Font("Times New Roman", 3, 18)); // NOI18N
         jLabel16.setForeground(new java.awt.Color(255, 204, 0));
         jLabel16.setText("Los mejores precios y productos publicados");
-        jPanel11.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 70, -1, -1));
+        jPanel11.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 60, -1, -1));
 
+        Producto9.setBackground(new java.awt.Color(255, 255, 255));
         Producto9.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         TituloP9.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
@@ -665,7 +651,7 @@ public class BusquedaProductos extends VentanaBase {
 
         CantidadP9.setText("jLabel22");
 
-        jLabel17.setText("ImagArticulo");
+        jLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Iconos/obturador.jpg"))); // NOI18N
 
         carro6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Iconos/shopcart.png"))); // NOI18N
         carro6.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -682,34 +668,32 @@ public class BusquedaProductos extends VentanaBase {
                 .addContainerGap()
                 .addGroup(Producto9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(Producto9Layout.createSequentialGroup()
-                        .addComponent(TituloP9)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(Producto9Layout.createSequentialGroup()
                         .addGroup(Producto9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(Producto9Layout.createSequentialGroup()
                                 .addComponent(PrecioLbl8)
                                 .addGap(18, 18, 18)
-                                .addComponent(PrecioP9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addComponent(PrecioP9, javax.swing.GroupLayout.DEFAULT_SIZE, 85, Short.MAX_VALUE))
                             .addGroup(Producto9Layout.createSequentialGroup()
                                 .addComponent(CntLbl8)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(CantidadP9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(carro6)))
+                        .addComponent(carro6))
+                    .addGroup(Producto9Layout.createSequentialGroup()
+                        .addGroup(Producto9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(TituloP9))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Producto9Layout.createSequentialGroup()
-                .addContainerGap(44, Short.MAX_VALUE)
-                .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(29, 29, 29))
         );
         Producto9Layout.setVerticalGroup(
             Producto9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(Producto9Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(TituloP9)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(Producto9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(Producto9Layout.createSequentialGroup()
                         .addGroup(Producto9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -725,14 +709,15 @@ public class BusquedaProductos extends VentanaBase {
                 .addContainerGap())
         );
 
-        jPanel11.add(Producto9, new org.netbeans.lib.awtextra.AbsoluteConstraints(1070, 410, 200, -1));
+        jPanel11.add(Producto9, new org.netbeans.lib.awtextra.AbsoluteConstraints(1080, 170, 200, -1));
 
         jScrollPane1.setViewportView(jPanel11);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 1370, 700));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 1400, 640));
 
         jMenu3.setText("Comprador");
 
+        jMenu6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Iconos/shopcart.png"))); // NOI18N
         jMenu6.setText("Ver Carrito de Compras");
         jMenu6.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -744,9 +729,17 @@ public class BusquedaProductos extends VentanaBase {
         jMenuBar1.add(jMenu3);
 
         jMenu4.setText("Inventario");
+
+        jMenu7.setText("Agregar Producto");
+        jMenu4.add(jMenu7);
+
         jMenuBar1.add(jMenu4);
 
         jMenu5.setText("Administrador");
+
+        jMenu8.setText("Agregar Categoria");
+        jMenu5.add(jMenu8);
+
         jMenuBar1.add(jMenu5);
 
         setJMenuBar(jMenuBar1);
@@ -880,14 +873,6 @@ public class BusquedaProductos extends VentanaBase {
                }}}}
     }//GEN-LAST:event_SiguienteBtnActionPerformed
 
-    private void AdminLblMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AdminLblMouseClicked
-
-        VentanaInicioVendedor vendedor = new VentanaInicioVendedor();
-        vendedor.setVisible(true);
-        vendedor.setFatherWindow(this, true);
-
-    }//GEN-LAST:event_AdminLblMouseClicked
-
     private void BuscarLblMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BuscarLblMouseClicked
 
         if (!(CategoriaBox.getSelectedItem().toString().equals("") && LineaBusquedaTXT.getText().equals(""))) {
@@ -1003,7 +988,6 @@ public class BusquedaProductos extends VentanaBase {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel AdminLbl;
     private javax.swing.JLabel BuscarLbl;
     private javax.swing.JLabel CantidadP4;
     private javax.swing.JLabel CantidadP5;
@@ -1057,7 +1041,6 @@ public class BusquedaProductos extends VentanaBase {
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
@@ -1081,6 +1064,8 @@ public class BusquedaProductos extends VentanaBase {
     private javax.swing.JMenu jMenu4;
     private javax.swing.JMenu jMenu5;
     private javax.swing.JMenu jMenu6;
+    private javax.swing.JMenu jMenu7;
+    private javax.swing.JMenu jMenu8;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuBar jMenuBar2;
     private javax.swing.JPanel jPanel10;

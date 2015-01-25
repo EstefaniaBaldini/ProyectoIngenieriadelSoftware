@@ -135,7 +135,7 @@ public class VentanaActualizarInformacion extends VentanaBase {
 
         jLabel20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Iconos/separador.png"))); // NOI18N
         jLabel20.setText("jLabel20");
-        jPanel10.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 90, 1370, -1));
+        jPanel10.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 90, 1500, -1));
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Iconos/homesmall.png"))); // NOI18N
         jLabel5.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -143,7 +143,7 @@ public class VentanaActualizarInformacion extends VentanaBase {
                 jLabel5MouseClicked(evt);
             }
         });
-        jPanel10.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(1260, 50, -1, -1));
+        jPanel10.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(1390, 50, -1, -1));
 
         EtiquetaError.setText("*EtiquetaERROR*");
 
@@ -253,14 +253,14 @@ public class VentanaActualizarInformacion extends VentanaBase {
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(2, 2, 2)
                 .addComponent(BotonRegistrar)
-                .addContainerGap(223, Short.MAX_VALUE))
+                .addContainerGap(243, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 1499, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

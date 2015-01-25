@@ -48,6 +48,7 @@ public class VentanaResumenCompra extends VentanaBase {
         jLabel9 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel20 = new javax.swing.JLabel();
+        jLabel21 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
@@ -96,6 +97,14 @@ public class VentanaResumenCompra extends VentanaBase {
         jLabel20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Iconos/separador.png"))); // NOI18N
         jLabel20.setText("jLabel20");
         jPanel10.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 90, 1350, -1));
+
+        jLabel21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Iconos/homesmall.png"))); // NOI18N
+        jLabel21.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel21MouseClicked(evt);
+            }
+        });
+        jPanel10.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(1270, 50, -1, -1));
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 204, 0)));
@@ -376,6 +385,12 @@ public class VentanaResumenCompra extends VentanaBase {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
 
+    private void jLabel21MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel21MouseClicked
+        this.setVisible(false);
+        BusquedaProductos casa = new BusquedaProductos();
+        casa.setVisible(true);
+    }//GEN-LAST:event_jLabel21MouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -435,6 +450,7 @@ public class VentanaResumenCompra extends VentanaBase {
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;

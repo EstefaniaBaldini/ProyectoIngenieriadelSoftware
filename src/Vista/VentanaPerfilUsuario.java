@@ -65,14 +65,10 @@ public class VentanaPerfilUsuario extends VentanaBase {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        IniciarSesionLbl = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        RegistrateLbl = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
-        AdminLbl = new javax.swing.JLabel();
-        jLabel15 = new javax.swing.JLabel();
         jLabel21 = new javax.swing.JLabel();
+        jLabel22 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
 
         jLabel10.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
@@ -157,54 +153,22 @@ public class VentanaPerfilUsuario extends VentanaBase {
         jPanel10.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1144, 11, -1, 189));
         jPanel10.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 176, -1, -1));
         jPanel10.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(16, 151, -1, 48));
-
-        IniciarSesionLbl.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        IniciarSesionLbl.setForeground(new java.awt.Color(255, 204, 51));
-        IniciarSesionLbl.setText("Ingresa");
-        IniciarSesionLbl.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                IniciarSesionLblMouseClicked(evt);
-            }
-        });
-        jPanel10.add(IniciarSesionLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(1150, 50, -1, -1));
-
-        jLabel7.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(255, 204, 51));
-        jLabel7.setText("/");
-        jPanel10.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(1140, 50, -1, -1));
-
-        RegistrateLbl.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        RegistrateLbl.setForeground(new java.awt.Color(255, 204, 51));
-        RegistrateLbl.setText("Inscribete");
-        RegistrateLbl.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                RegistrateLblMouseClicked(evt);
-            }
-        });
-        jPanel10.add(RegistrateLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(1070, 50, -1, -1));
         jPanel10.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(22, 199, -1, -1));
 
         jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Iconos/logoP.png"))); // NOI18N
         jPanel10.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(54, 0, -1, -1));
 
-        AdminLbl.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        AdminLbl.setForeground(new java.awt.Color(255, 204, 0));
-        AdminLbl.setText("Vender");
-        AdminLbl.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                AdminLblMouseClicked(evt);
-            }
-        });
-        jPanel10.add(AdminLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(1220, 50, -1, -1));
-
-        jLabel15.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel15.setForeground(new java.awt.Color(255, 204, 51));
-        jLabel15.setText("/");
-        jPanel10.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(1210, 50, -1, -1));
-
         jLabel21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Iconos/separador.png"))); // NOI18N
         jLabel21.setText("jLabel20");
         jPanel10.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 90, 1350, -1));
+
+        jLabel22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Iconos/homesmall.png"))); // NOI18N
+        jLabel22.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel22MouseClicked(evt);
+            }
+        });
+        jPanel10.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(1270, 50, -1, -1));
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Iconos/compras.jpg"))); // NOI18N
 
@@ -331,24 +295,6 @@ public class VentanaPerfilUsuario extends VentanaBase {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void AdminLblMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AdminLblMouseClicked
-
-    }//GEN-LAST:event_AdminLblMouseClicked
-
-    private void RegistrateLblMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_RegistrateLblMouseClicked
-
-        VentanaRegistro registro = new VentanaRegistro();
-        registro.setVisible(true);
-        registro.setFatherWindow(this, true);
-    }//GEN-LAST:event_RegistrateLblMouseClicked
-
-    private void IniciarSesionLblMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_IniciarSesionLblMouseClicked
-
-        VentanaInicioSesion iniciosesion = new VentanaInicioSesion();
-        iniciosesion.setVisible(true);
-        iniciosesion.setFatherWindow(this, true);
-    }//GEN-LAST:event_IniciarSesionLblMouseClicked
-
     private void CambiarInfoBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CambiarInfoBtnActionPerformed
 
         VentanaActualizarInformacion vent = new VentanaActualizarInformacion();
@@ -365,6 +311,12 @@ public class VentanaPerfilUsuario extends VentanaBase {
         VentanaAgrActMetodoPago pago = new VentanaAgrActMetodoPago();
         pago.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jLabel22MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel22MouseClicked
+        this.setVisible(false);
+        BusquedaProductos casa = new BusquedaProductos();
+        casa.setVisible(true);
+    }//GEN-LAST:event_jLabel22MouseClicked
 
     /**
      * @param args the command line arguments
@@ -402,11 +354,8 @@ public class VentanaPerfilUsuario extends VentanaBase {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel AdminLbl;
     private javax.swing.JLabel CILbl;
     private javax.swing.JButton CambiarInfoBtn;
-    private javax.swing.JLabel IniciarSesionLbl;
-    private javax.swing.JLabel RegistrateLbl;
     private javax.swing.JLabel TituloRegistro;
     private javax.swing.JLabel appelidolbl;
     private javax.swing.JLabel dirlbl;
@@ -419,17 +368,16 @@ public class VentanaPerfilUsuario extends VentanaBase {
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
